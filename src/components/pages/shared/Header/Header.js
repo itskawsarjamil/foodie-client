@@ -62,12 +62,12 @@ const Header = () => {
                     </li>
                     <li>
                         <NavLink
-                            to="/myreviews"
-                            aria-label="my reviews"
-                            title="my reviews"
+                            to="/dashboard"
+                            aria-label="dashboard"
+                            title="dashboard"
                             className={({ isActive }) => isActive ? "font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-yellow-400" : "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-yellow-400"}
                         >
-                            My Reviews
+                            Dashboard
                         </NavLink>
                     </li>
                     <li>
@@ -194,12 +194,12 @@ const Header = () => {
                                         </li>
                                         <li>
                                             <NavLink
-                                                to="/myreviews"
-                                                aria-label="my reviews"
-                                                title="my reviews"
+                                                to="/dashboard"
+                                                aria-label="dashboard"
+                                                title="dashboard"
                                                 className={({ isActive }) => isActive ? "font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-yellow-400" : "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-yellow-400"}
                                             >
-                                                My Reviews
+                                                Dashboard
                                             </NavLink>
                                         </li>
                                         <li>

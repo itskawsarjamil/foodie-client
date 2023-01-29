@@ -107,14 +107,7 @@ const Footer = () => {
                     © Copyright 2023 Kawsar Jamil. All rights reserved.
                 </p>
                 <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
-                    <li>
-                        <a
-                            href="/"
-                            className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-                        >
-                            F.A.Q
-                        </a>
-                    </li>
+                    
                     <li>
                         <a
                             href="/"

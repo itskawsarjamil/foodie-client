@@ -5,10 +5,14 @@ import Error from "../../pages/error/Error";
 import Services from "../../pages/Services/Services";
 import About from "../../pages/About/About";
 import Blog from "../../pages/Blog/Blog";
-import Reviews from "../../pages/reviews/Reviews";
 import AddService from "../../pages/Services/AddService/AddService";
 import Login from "../../pages/Login/Login";
 import Signup from "../../pages/Signup/Signup";
+import ServiceDetails from "../../pages/Services/ServiceDetails/ServiceDetails";
+import Profile from "../../pages/Profile/Profile";
+import DashboardLayout from "../../layout/Dashboard/DashboardLayout";
+import Orders from "../../pages/Orders/Orders";
+import Reviews from "../../pages/reviews/Reviews";
 
 
 export const routes = createBrowserRouter([
@@ -30,16 +34,17 @@ export const routes = createBrowserRouter([
                 element: <Services></Services>,
             },
             {
+                path: '/services/:id',
+                element: <ServiceDetails></ServiceDetails>,
+                // loader: ({ params }) => fetch('services.json')
+            },
+            {
                 path: '/about',
                 element: <About></About>,
             },
             {
                 path: '/blog',
                 element: <Blog></Blog>,
-            },
-            {
-                path: '/myreviews',
-                element: <Reviews></Reviews>,
             },
             {
                 path: '/addservice',
@@ -55,4 +60,26 @@ export const routes = createBrowserRouter([
             },
         ]
     },
+    {
+        path: '/dashboard',
+        element: <DashboardLayout></DashboardLayout>,
+        children: [
+            {
+                path: '/dashboard',
+                element: <Profile></Profile>,
+            },
+            {
+                path: '/dashboard/profile',
+                element: <Profile></Profile>,
+            },
+            {
+                path: '/dashboard/orders',
+                element: <Orders></Orders>,
+            },
+            {
+                path: '/dashboard/reviews',
+                element: <Reviews></Reviews>,
+            },
+        ]
+    }
 ])

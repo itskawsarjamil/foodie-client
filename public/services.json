@@ -1,152 +1,128 @@
 [
     {
         "service_id": "04",
-        "title": "Engine Oil Change",
-        "img": "https://i.ibb.co/T2cpBd5/888.jpg",
-        "price": "20.00",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
-        "facility": [
-            {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
+        "title": "Michigan hot dog",
+        "img": "https://realfood.tesco.com/media/images/58-STICKY-HOTDOGS-LGH-bf8f553c-66f9-4925-b5c8-35d432a63b22-0-1400x919.jpg",
+        "price": "200.00",
+        "description": "Michigan hot dog is a delicious beef hot dog made by steaming the bun and adding ground beef and Michigan sauce (or meat sauce). They make the famous sauce using tomatoes, brown sugar, vinegar, and spices.",
+        "ingredient": [
+            "Kosher salt",
+            "8 cups finely shredded green cabbage (from a 1 1/2-pound head)",
+            "1 cup distilled white vinegar",
+            "1 tablespoon sugar",
+            "2 tablespoons yellow mustard seeds",
+            "Vegetable oil, for frying",
+            "5 large shallots, very thinly sliced crosswise and separated into rings",
+            "1/4 cup Wondra flour (see Note)",
+            "1 1/2 pounds ground beef chuck, preferably 85 percent lean",
+            "1 teaspoon onion powder",
+            "1 teaspoon garlic powder",
+            "1 teaspoon sweet smoked paprika",
+            "1 tablespoon Worcestershire sauce",
+            "Freshly ground pepper",
+            "6 ounces extra-sharp cheddar, shredded",
+            "2 cups baby arugula",
+            "4 brioche buns, split and toasted"
         ]
     },
     {
         "service_id": "05",
-        "title": "Battery Charge",
-        "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
-        "price": "20.00",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
-        "facility": [
-            {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
+        "title": "hamburger",
+        "img": "https://i.ibb.co/KD5pkgg/hamburger-494706-340.webp",
+        "price": "250.00",
+        "description": "It's a classic all-American recipe for mouthwatering burgers that can be cooked on the grill, on the stovetop, as thick 1/3 pound patties, or as ultra-thin griddle patties.",
+        "ingredient": [
+            "1/4 cup sambal oelek (Indonesian chile sauce)",
+            "1/4 cup ketchup",
+            "4 slices of thick-cut bacon",
+            "Kosher salt",
+            "4 slices of American cheese",
+            "4 potato buns, toasted",
+            "1 cup chopped drained cabbage kimchi (6 ounces)"
         ]
     },
     {
         "service_id": "01",
-        "title": "Full car Repair",
-        "img": "https://i.ibb.co/R6Z2nFM/55.jpg",
+        "title": "tasty sandwich",
+        "img": "https://realfood.tesco.com/media/images/Burger-31LGH-a296a356-020c-4969-86e8-d8c26139f83f-0-1400x919.jpg",
         "price": "200.00",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
-        "facility": [
-            {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
+        "description": "They're loved the world over, with a huge variety of thrilling fillings and different breads. Whether you love yours cheesy, spicy, creamy, crunchy, meaty, veggie or sweet, or if you prefer classic white, sourdough, crispy baguette, warm flatbreads or toasted pittas, this collection of our favourite recipes will take your sandwiches to the next level.",
+        "ingredient": [
+            "1/2 cup mayonnaise",
+            "1/3 cup ketchup",
+            "1 tablespoon red wine vinegar",
+            "1 tablespoon grated onion",
+            "1 tablespoon chopped parsley",
+            "1 tablespoon chopped tarragon",
+            "1 teaspoon Worcestershire sauce",
+            "12 ounces thickly sliced bacon",
+            "1 1/3 pounds ground beef chuck",
+            "1 1/3 pounds ground beef sirloin",
+            "1 teaspoon kosher salt",
+            "1/2 teaspoon freshly ground pepper",
+            "2 tablespoons unsalted butter, melted",
+            "3 ounces sharp cheddar cheese, cut into 6 slices",
+            "6 hamburger buns, split and toasted",
+            "6 iceberg lettuce leaves",
+            "6 slices of tomato",
+            "6 slices of red onion"
         ]
     },
     {
         "service_id": "02",
-        "title": "Engine Repair",
-        "img": "https://i.ibb.co/5MvmD2g/88.jpg",
+        "title": "beef cotlet burger",
+        "img": "https://www.foodandwine.com/thmb/jx8034sl-WMfwvDC2vWxVeviUgI=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/HD-2010-r-cocktails-minetta-burger-c90cfc04fd8c43c699892984f294817f.jpg",
         "price": "150.00",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
-        "facility": [
-            {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
+        "description": "Make cutlets with ground beef or chicken or lamb, it will make perfect patties for the burger.",
+        "ingredient": [
+           " 16 thin bread-and-butter pickle slices, patted dry",
+
+           " Four 4-inch potato buns, buttered and toasted",
+            
+            "1 1/4 pounds ground beef chuck (30 percent fat)",
+            
+            "Salt and freshly ground pepper",
+            
+            "2 small onions, sliced paper thin",
+            
+            "4 ounces sharp cheddar cheese, sliced",
+            
+            "Umami dust, for sprinkling (optional, see Note)"
         ]
     },
     {
         "service_id": "03",
-        "title": "Automatic Services",
-        "img": "https://i.ibb.co/wh7t3N3/555.jpg",
-        "price": "30.00",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
-        "facility": [
-            {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
+        "title": "special burger",
+        "img": "https://www.foodandwine.com/thmb/GQg7INoiZq92KmWbfH_bgPqgU80=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/HD-201106-r-cheddar-onion-burger-0b10de9034c54072aedc18a4ced0284d.jpg",
+        "price": "350.00",
+        "description": "Inspired by the sliders at White Manna in Hackensack, New Jersey, Umami Burger founder Adam Fleischman creates beef patties by flattening balls of ground meat on the griddle.",
+        "ingredient": [
+            " 1 1/2 pounds ground pork",
+            "2 scallions, thinly sliced",
+            "1 tablespoon finely grated fresh ginger",
+            "1 large garlic clove, minced",
+            "1 1/2 teaspoons Asian sesame oil",
+            "Kosher salt and freshly ground pepper",
+            "4 hamburger buns, split",
+            "2 cups coleslaw mix",
+            "2 teaspoons rice vinegar",
+            "1 teaspoon soy sauce"
         ]
     },
     {
         "service_id": "06",
-        "title": "Electrical System",
-        "img": "https://i.ibb.co/KzCG8qr/8888.jpg",
+        "title": "beef burger",
+        "img": "https://www.foodandwine.com/thmb/CpKX792b50yNBNm841S-6aWrvo8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/HD-201201-r-nacho-burger-4f10ae6f3d6c44adb5303ab34d5e60c7.jpg",
         "price": "20.00",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
-        "facility": [
-            {
-                "name": "Instant Car Services",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Easy Customer Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            },
-            {
-                "name": "Quality Cost Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
-            }
+        "description": "Nothing says summer quite like the sound of real beef sizzling on the grill, and there's no better time to enjoy a juicy burger than this summer. Check out some recipes and tips for a delicious beef burger.",
+        "ingredient": [
+            "3 tablespoons red wine vinegar",
+            "1 tablespoon vegetable oil",
+            "1 chipotle chile in adobo, seeded and minced",
+            "3 plum tomatoes, finely diced",
+            "2 tablespoons red onion, finely diced",
+            "3 tablespoons chopped cilantro",
+            "Salt"
         ]
     }
 ]
