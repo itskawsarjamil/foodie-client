@@ -1,9 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/logo/foodielogo.png";
+import { authContext } from "../../../context/AuthContext/AuthProvider";
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+    const { user, logout } = useContext(authContext);
+    // console.log(user);
+    const handleLogOut = () => {
+        logout()
+            .then(() => {
+                alert("sign out successfull");
+            })
+            .catch(er => { console.log(er) })
+    }
     return (
         <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
             <div className="relative flex items-center justify-between">
@@ -60,16 +69,7 @@ const Header = () => {
                             Blog
                         </NavLink>
                     </li>
-                    <li>
-                        <NavLink
-                            to="/dashboard"
-                            aria-label="dashboard"
-                            title="dashboard"
-                            className={({ isActive }) => isActive ? "font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-yellow-400" : "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-yellow-400"}
-                        >
-                            Dashboard
-                        </NavLink>
-                    </li>
+
                     <li>
                         <NavLink
                             to="/addservice"
@@ -80,19 +80,37 @@ const Header = () => {
                             Add Service
                         </NavLink>
                     </li>
-                    <li>
-                        <button className="btn-ghost" aria-label="Log Out" title="Log Out">Log Out</button>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="/signin"
-                            className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-yellow-400 hover:bg-yellow-700 focus:shadow-outline focus:outline-none"
-                            aria-label="Sign in"
-                            title="Sign in"
-                        >
-                            Sign in
-                        </NavLink>
-                    </li>
+                    {
+                        (user && user.uid) ?
+                            <>
+                                <li>
+                                    <NavLink
+                                        to="/dashboard"
+                                        aria-label="dashboard"
+                                        title="dashboard"
+                                        className={({ isActive }) => isActive ? "font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-yellow-400" : "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-yellow-400"}
+                                    >
+                                        Dashboard
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <button onClick={handleLogOut} className="btn-ghost inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-yellow-400 hover:bg-yellow-700 focus:shadow-outline focus:outline-none " aria-label="Log Out" title="Log Out">Log Out</button>
+                                </li>
+                            </>
+                            :
+                            <li>
+                                <NavLink
+                                    to="/signin"
+                                    className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-yellow-400 hover:bg-yellow-700 focus:shadow-outline focus:outline-none"
+                                    aria-label="Sign in"
+                                    title="Sign in"
+                                >
+                                    Sign in
+                                </NavLink>
+                            </li>
+                    }
+
+
                 </ul>
                 <div className="lg:hidden">
                     <button
@@ -194,16 +212,6 @@ const Header = () => {
                                         </li>
                                         <li>
                                             <NavLink
-                                                to="/dashboard"
-                                                aria-label="dashboard"
-                                                title="dashboard"
-                                                className={({ isActive }) => isActive ? "font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-yellow-400" : "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-yellow-400"}
-                                            >
-                                                Dashboard
-                                            </NavLink>
-                                        </li>
-                                        <li>
-                                            <NavLink
                                                 to="/addservice"
                                                 aria-label="Add Service"
                                                 title="Add Service"
@@ -212,19 +220,38 @@ const Header = () => {
                                                 Add Service
                                             </NavLink>
                                         </li>
-                                        <li>
-                                            <button className="btn-ghost" aria-label="Log Out" title="Log Out">Log Out</button>
-                                        </li>
-                                        <li>
-                                            <NavLink
-                                                to="/signin"
-                                                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-yellow-400 hover:bg-yellow-700 focus:shadow-outline focus:outline-none"
-                                                aria-label="Sign in"
-                                                title="Sign in"
-                                            >
-                                                Sign in
-                                            </NavLink>
-                                        </li>
+                                        {
+                                            (user && user.uid) ?
+                                                <>
+                                                    <li>
+                                                        <NavLink
+                                                            to="/dashboard"
+                                                            aria-label="dashboard"
+                                                            title="dashboard"
+                                                            className={({ isActive }) => isActive ? "font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-yellow-400" : "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-yellow-400"}
+                                                        >
+                                                            Dashboard
+                                                        </NavLink>
+                                                    </li>
+
+                                                    <li>
+                                                        <button onClick={handleLogOut} className="btn-ghost inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-yellow-400 hover:bg-yellow-700 focus:shadow-outline focus:outline-none " aria-label="Log Out" title="Log Out">Log Out</button>
+                                                    </li>
+                                                </>
+                                                :
+                                                <li>
+                                                    <NavLink
+                                                        to="/signin"
+                                                        className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-yellow-400 hover:bg-yellow-700 focus:shadow-outline focus:outline-none"
+                                                        aria-label="Sign in"
+                                                        title="Sign in"
+                                                    >
+                                                        Sign in
+                                                    </NavLink>
+                                                </li>
+                                        }
+
+
                                     </ul>
                                 </nav>
                             </div>

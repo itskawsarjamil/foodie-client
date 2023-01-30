@@ -3,22 +3,22 @@ import logo from "../../assets/logo/foodielogo.png";
 import { Link } from 'react-router-dom';
 import Signuptoggle from './Signuptoggle';
 import Signintoggle from './Signintoggle';
-import { toggleContext } from '../../layout/Main/Main';
+import { toggleContext } from '../../../App';
 
 const Signup = () => {
     const { toggle,setToggle } = useContext(toggleContext);
     // const [toggle, setToggle] = useState(true);
 
     const handleToggle = (x) => {
-        console.log(x);
+        // console.log(x);
         setToggle(x);
     }
 
     return (
         <div>
             <section className="bg-white ">
-                <div className="container flex items-center justify-center min-h-screen px-6 mx-auto">
-                    <form className="w-full max-w-md">
+                <div className="container flex items-start justify-center min-h-screen px-6 mx-auto">
+                    <div className="w-full max-w-md">
                         <div className="flex justify-center mx-auto">
                             <img className="w-auto sm:h-12 md:h-16 lg:h-20" src={logo} alt="" />
                         </div>
@@ -37,7 +37,7 @@ const Signup = () => {
                             toggle ? <Signuptoggle handleToggle={handleToggle}></Signuptoggle> : <Signintoggle handleToggle={handleToggle}></Signintoggle>
 
                         }
-                    </form>
+                    </div>
                 </div>
             </section>
         </div>

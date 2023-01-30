@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { authContext } from '../../context/AuthContext/AuthProvider';
 
 const Sidebar = () => {
+    const { logout } = useContext(authContext);
+    const handleLogOut = () => {
+        logout()
+            .then(() => {
+                alert("log out successful")
+            })
+            .catch(err => { console.log(err) })
+    }
     return (
         <div>
             <div className="flex flex-col h-screen p-3 w-80 bg-gray-900 text-gray-100 divide-y divide-gray-700">
@@ -43,7 +52,7 @@ const Sidebar = () => {
 
 
                             <li className="rounded-sm">
-                                <button className="flex items-center p-2 space-x-3 rounded-md">
+                                <button onClick={handleLogOut} className="flex items-center p-2 space-x-3 rounded-md">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current dark:text-gray-400">
                                         <path d="M440,424V88H352V13.005L88,58.522V424H16v32h86.9L352,490.358V120h56V456h88V424ZM320,453.642,120,426.056V85.478L320,51Z"></path>
                                         <rect width="32" height="64" x="256" y="232"></rect>

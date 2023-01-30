@@ -13,6 +13,7 @@ import Profile from "../../pages/Profile/Profile";
 import DashboardLayout from "../../layout/Dashboard/DashboardLayout";
 import Orders from "../../pages/Orders/Orders";
 import Reviews from "../../pages/reviews/Reviews";
+import PrivateRoute from "../privateRoute/PrivateRoute";
 
 
 export const routes = createBrowserRouter([
@@ -48,7 +49,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/addservice',
-                element: <AddService></AddService>,
+                element: <PrivateRoute><AddService></AddService></PrivateRoute>,
             },
             {
                 path: '/signin',
@@ -62,7 +63,7 @@ export const routes = createBrowserRouter([
     },
     {
         path: '/dashboard',
-        element: <DashboardLayout></DashboardLayout>,
+        element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
         children: [
             {
                 path: '/dashboard',
