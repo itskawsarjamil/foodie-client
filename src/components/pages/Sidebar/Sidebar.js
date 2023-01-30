@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 import { authContext } from '../../context/AuthContext/AuthProvider';
 
 const Sidebar = () => {
-    const { logout } = useContext(authContext);
+    const { logout,user } = useContext(authContext);
+    
+    console.log(user);
+    const { displayName, photoURL, email, phoneNumber, emailVerified } = user;
     const handleLogOut = () => {
         logout()
             .then(() => {
@@ -64,9 +67,9 @@ const Sidebar = () => {
                     </div>
                 </div>
                 <div className="flex items-center p-2 mt-12 space-x-4 justify-self-end">
-                    <img src="https://source.unsplash.com/100x100/?portrait" alt="" className="w-12 h-12 rounded-lg dark:bg-gray-500" />
+                    <img src={photoURL} alt="" className="w-12 h-12 rounded-lg dark:bg-gray-500" />
                     <div>
-                        <h2 className="text-lg font-semibold">Leroy Jenkins</h2>
+                        <h2 className="text-lg font-semibold">{displayName}</h2>
                         <span className="flex items-center space-x-1">
                             <Link rel="noopener noreferrer" to="/dashboard/profile" className="text-xs hover:underline text-gray-400">View profile</Link>
                         </span>
