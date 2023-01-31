@@ -1,4 +1,4 @@
-// import { MdDeleteForever, MdEditOff } from "react-icons/md";
+
 import React from 'react';
 
 const Review = ({ review }) => {
@@ -13,10 +13,6 @@ const Review = ({ review }) => {
                         <h4 className="text-lg font-semibold text-center md:text-left">{userName}</h4>
                         <h6 className="text-start">rating: {rating}</h6>
                         <p className="text-gray-400 text-center">{feedback}</p>
-                        {/* <div className='flex justify-end gap-4 text-lg'>
-                            <button><MdEditOff /></button>
-                            <button><MdDeleteForever /></button>
-                        </div> */}
                     </div>
                 </div>
             </div>

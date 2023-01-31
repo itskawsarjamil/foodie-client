@@ -5,8 +5,8 @@ import { authContext } from '../../context/AuthContext/AuthProvider';
 const Sidebar = () => {
     const { logout, user } = useContext(authContext);
 
-    console.log(user);
-    const { displayName, photoURL, email, phoneNumber, emailVerified } = user;
+    // console.log(user);
+    const { displayName, photoURL } = user;
     const handleLogOut = () => {
         logout()
             .then(() => {
