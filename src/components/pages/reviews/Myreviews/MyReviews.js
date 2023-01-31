@@ -5,7 +5,7 @@ import { authContext } from "../../../context/AuthContext/AuthProvider";
 import ModifyReview from "./ModifyReview";
 
 
-const MyReviews = () => {
+const MyReviews = () => { 
 
     const { user } = useContext(authContext);
 

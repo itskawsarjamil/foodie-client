@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
 import { authContext } from '../../context/AuthContext/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const Profile = () => {
+    useTitle("Dashboard");
     const { user } = useContext(authContext);
     // console.log(user);
     const { displayName, photoURL, email, phoneNumber, emailVerified } = user;
@@ -10,7 +12,7 @@ const Profile = () => {
         <div className='h-[50vh]  flex items-start justify-center mt-28'>
             <div className="max-w-md p-8 sm:flex sm:space-x-6 bg-gray-900 text-gray-100">
                 <div className="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
-                    
+
                     <img src={photoURL} alt="" className="object-cover object-center w-full h-full rounded bg-gray-500" />
                 </div>
                 <div className="flex flex-col space-y-4">

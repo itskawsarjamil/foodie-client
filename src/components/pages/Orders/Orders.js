@@ -1,6 +1,8 @@
 import React from 'react';
+import useTitle from '../../hooks/useTitle';
 
 const Orders = () => {
+    useTitle("Orders");
     return (
         <div className='flex justify-center items-center h-[80vh]'>
             <h2 className='text-5xl font-bold '>Coming Soon</h2>
