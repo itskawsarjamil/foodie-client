@@ -5,7 +5,7 @@ import 'react-photo-view/dist/react-photo-view.css';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 const ServiceCard = ({ service }) => {
-    console.log(service);
+    // console.log(service);
     const { title, img, description, price, service_id } = service;
 
     

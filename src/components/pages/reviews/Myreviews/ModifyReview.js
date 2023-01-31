@@ -1,49 +1,35 @@
-import React, { useContext, useState } from 'react';
+import React, {  useState } from 'react';
 import { Link } from 'react-router-dom';
-import { authContext } from '../../../context/AuthContext/AuthProvider';
 
-const ModifyReview = ({ modifyReview }) => {
-    const { user } = useContext(authContext);
+const ModifyReview = ({ modifyReview, setIsChange }) => {
 
-    const [rating, setRating] = useState(0);
-    console.log(modifyReview);
-
-    // const { _id, title } = service;
-
-    // const reviewData = {
-    //     serviceName: title,
-    //     service_id: _id,
-    //     userEmail: user?.email || '',
-    //     userName: user?.displayName || '',
-    //     userPhotoURL: user?.photoURL || '',
-    //     feedback: '',
-    //     rating
-    // }
-
+    const [rating, setRating] = useState(modifyReview.rating);
+    const [reviewData, setReviewData] = useState(modifyReview);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // console.log(e.target.message.value);
-        // reviewData.feedback = e.target.message.value;
+        reviewData.rating = rating;
+        reviewData.feedback = e.target.message.value;
         // console.log(reviewData);
 
-        fetch("http://localhost:5000/addreview", {
-            method: 'POST', // or 'PUT'
+        fetch(`http://localhost:5000/modifyreview?id=${reviewData._id}`, {
+            method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
             },
-            // body: JSON.stringify(reviewData),
+            body: JSON.stringify(reviewData),
         })
             .then((response) => response.json())
             .then((data) => {
-                // console.log('Success:', data);
-               
-                // setReviews((curr) => [...curr, data]);
+                // console.log(data);
+                if (data.acknowledged) {
+                    alert("data modified");
+                }
             })
             .catch((error) => {
                 console.error('Error:', error);
             });
-        setRating(0);
+        setIsChange(false);
         e.target.reset();
     }
     const handleRating = (x) => {
@@ -85,12 +71,12 @@ const ModifyReview = ({ modifyReview }) => {
                         </div>
                     </div>
                     <div className="flex flex-col w-full">
-                        <textarea name='message' rows="3" placeholder="Message..." className="p-4 rounded-md resize-none  text-white  bg-gray-500"></textarea>
+                        <textarea defaultValue={reviewData.feedback} name='message' rows="3" placeholder="Message..." className="p-4 rounded-md resize-none  text-white  bg-gray-500"></textarea>
                         <button type="submit" className="py-4 my-8 font-semibold rounded-md  text-black  bg-violet-400">Leave feedback</button>
                     </div>
                 </form>
                 <div className="flex items-center justify-center">
-                    <Link rel="noopener noreferrer" to='/services' className="text-sm  text-black">Maybe later</Link>
+                    <Link rel="noopener noreferrer" to='' onClick={() => setIsChange(false)} className="text-sm  text-black">Maybe later</Link>
                 </div>
             </div>
         </div>

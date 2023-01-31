@@ -14,7 +14,6 @@ import DashboardLayout from "../../layout/Dashboard/DashboardLayout";
 import Orders from "../../pages/Orders/Orders";
 import MyReviews from "../../pages/reviews/Myreviews/MyReviews";
 import PrivateRoute from "../privateRoute/PrivateRoute";
-import ModifyReview from "../../pages/reviews/Myreviews/ModifyReview";
 
 
 export const routes = createBrowserRouter([
@@ -84,10 +83,7 @@ export const routes = createBrowserRouter([
                 element: <MyReviews></MyReviews>,
 
             },
-            // {
-            //     path: '/dashboard/reviewform',
-            //     element: <ModifyReview></ModifyReview>
-            // }
+            
         ]
     }
 ])
