@@ -64,7 +64,7 @@ const Blog = () => {
                             </svg>
                         </div>
                     </a>
-                    <div className="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl">
+                    {/* <div className="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl">
                         <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
                             <span className="relative inline-block">
                                 <svg
@@ -97,24 +97,24 @@ const Blog = () => {
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                             accusantium doloremque rem aperiam, eaque ipsa quae.
                         </p>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="space-y-4">
-                    <Item title="The quick, brown fox jumps over a lazy dog?">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                    <Item title="Difference between SQL and NoSQL">
+                        SQL databases are primarily called as Relational Databases (RDBMS); whereas NoSQL database are primarily called as non-relational or distributed database.SQL databases are table-based on the other hand NoSQL databases are either key-value pairs, document-based, graph databases or wide-column stores. This makes relational SQL databases a better option for applications that require multi-row transactions such as an accounting system or for legacy systems that were built for a relational structure.
                     </Item>
-                    <Item title="The first mate and his Skipper too will do?">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                    <Item title="What is JWT, and how does it work?">
+                        JSON Web Token (JWT) is an open standard for securely transmitting information between parties as JSON object. It is compact, readable and digitally signed using a private key/ or a public key pair by the Identity Provider(IdP).
+                        Authentication server verifies the credentials and issues a jwt signed using either a secret salt or a private key. User's Client uses the JWT to access protected resources by passing the JWT in HTTP Authorization header. Resource server then verifies the authenticity of the token using the secret salt/ public key.
                     </Item>
-                    <Item title="Is the Space Pope reptilian!?">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                    <Item title="What is the difference between javascript and NodeJS?">
+                        Javascript is a Scripting language. It is mostly abbreviated as JS. It can be said that Javascript is the updated version of the ECMA script. Javascript is a high-level programming language that uses the concept of Oops but it is based on prototype inheritance.
+
+
+                        NodeJS is a cross-platform and opensource Javascript runtime environment that allows the javascript to be run on the server-side. Nodejs allows Javascript code to run outside the browser. Nodejs comes with a lot of modules and mostly used in web development.
                     </Item>
-                    <Item title="How much money you got on you?">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                    <Item title="How does NodeJS handle multiple requests at the same time?">
+                        NodeJS receives multiple client requests and places them into EventQueue. NodeJS is built with the concept of event-driven architecture. NodeJS has its own EventLoop which is an infinite loop that receives requests and processes them. EventLoop is the listener for the EventQueue.
                     </Item>
                 </div>
             </div>
