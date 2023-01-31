@@ -5,9 +5,9 @@ import { authContext } from "../../../context/AuthContext/AuthProvider";
 import ModifyReview from "./ModifyReview";
 
 
-const MyReviews = () => { 
+const MyReviews = () => {
 
-    const { user } = useContext(authContext);
+    const { user, logout } = useContext(authContext);
 
 
     useTitle("My Reviews");
@@ -18,15 +18,25 @@ const MyReviews = () => {
     const [count, setCount] = useState(0);
     const [page, setPage] = useState(0);
     useEffect(() => {
-        fetch(`http://localhost:5000/myreviews?page=${page}&email=${user.email}`)
-            .then(res => res.json())
+        fetch(`https://foodie-server-ten.vercel.app/myreviews?page=${page}&email=${user.email}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('json-token')}}`,
+            }
+        })
+            .then(res => {
+                if (res.status === 401 || res.status === 403) {
+                    return logout();
+                }
+                return res.json();
+            })
+
             .then(data => {
                 // console.log(data);
                 setCount(data.count);
                 setReviews(data.result);
             })
 
-    }, [page, count, user.email])
+    }, [page, count, user.email, logout])
 
     const handlePage = (x) => {
         if (x === 1) {
@@ -42,10 +52,18 @@ const MyReviews = () => {
         }
     }
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/myreviews/${id}`, {
+        fetch(`https://foodie-server-ten.vercel.app/myreviews/${id}`, {
             method: "DELETE",
+            headers: {
+                authorization: `Bearer ${localStorage.getItem("json-token")}`
+            }
         })
-            .then(res => res.json())
+            .then(res => {
+                if (res.status === 401 || res.status === 403) {
+                    return logout();
+                }
+                return res.json();
+            })
             .then(data => {
                 if (data.acknowledged) {
                     setCount(count - 1);
@@ -55,11 +73,11 @@ const MyReviews = () => {
             })
     }
     const handleEdit = (id) => {
-        
+
         const data = reviews.find(review => review._id === id);
         setIsChange(true);
         setModifyReview(data);
-       
+
     }
     return (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">

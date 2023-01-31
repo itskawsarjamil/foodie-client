@@ -1,7 +1,9 @@
-import React, {  useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { authContext } from '../../../context/AuthContext/AuthProvider';
 
 const ModifyReview = ({ modifyReview, setIsChange }) => {
+    const { logout } = useContext(authContext);
 
     const [rating, setRating] = useState(modifyReview.rating);
     const [reviewData, setReviewData] = useState(modifyReview);
@@ -12,14 +14,20 @@ const ModifyReview = ({ modifyReview, setIsChange }) => {
         reviewData.feedback = e.target.message.value;
         // console.log(reviewData);
 
-        fetch(`http://localhost:5000/modifyreview?id=${reviewData._id}`, {
+        fetch(`https://foodie-server-ten.vercel.app/modifyreview?id=${reviewData._id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem("json-token")}`,
             },
             body: JSON.stringify(reviewData),
         })
-            .then((response) => response.json())
+            .then((response) => {
+                if (response.status === 401 || response.status === 403) {
+                    return logout();
+                }
+                return response.json();
+            })
             .then((data) => {
                 // console.log(data);
                 if (data.acknowledged) {

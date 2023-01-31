@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import useTitle from '../../../hooks/useTitle';
+import { authContext } from '../../../context/AuthContext/AuthProvider';
 
 
 const AddService = () => {
+    const { logout } = useContext(authContext);
     useTitle("Add Service");
 
     const [serviceData, setServiceData] = useState({
@@ -33,14 +35,20 @@ const AddService = () => {
 
         serviceData.ingredient = [...ingredientData];
         console.log(serviceData);
-        fetch("http://localhost:5000/addservice", {
+        fetch("https://foodie-server-ten.vercel.app/addservice", {
             method: "POST",
             headers: {
-                "content-type": "application/json",
+                'Content-Type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('json-token')}`
             },
-            body: JSON.stringify(serviceData)
+            body: JSON.stringify(serviceData),
         })
-            .then(res => res.json())
+            .then(res => {
+                if (res.status === 401 || res.status === 403) {
+                    return logout();
+                }
+                return res.json();
+            })
             .then(data => console.log(data))
             .catch(e => console.log(e))
 
