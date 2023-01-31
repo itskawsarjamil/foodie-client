@@ -1,25 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import Review from './Review';
 
-const Reviews = () => {
-    const [reviews, setReviews] = useState([]);
-    useEffect(() => {
-        fetch("")
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                setReviews(data);
-            })
+const Reviews = ({ reviews }) => {
 
-    }, [])
     return (
         <div className=''>
             {
-                reviews.map((review, idx) => <Review key={idx} review={review}></Review>)
+                reviews.length ?
+                    <>
+                        <p className='text-3xl font-bold mt-5'>Total Review: <span className='text-yellow-700'>{reviews.length}</span></p>
+                        <div>
+                            {
+                                reviews.map((review, idx) => <Review key={idx} review={review}></Review>)
+                            }
+                        </div>
+                    </>
+                    : <p className='text-4xl font-bold text-gray-800 '>NO Review Found</p>
             }
-            <Review></Review>
-            <Review></Review>
-            
         </div>
     );
 };
