@@ -33,11 +33,12 @@ export const routes = createBrowserRouter([
             {
                 path: '/services',
                 element: <Services></Services>,
+                loader: () => fetch("http://localhost:5000/services"),
             },
             {
                 path: '/services/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                // loader: ({ params }) => fetch('services.json')
+                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`),
             },
             {
                 path: '/about',

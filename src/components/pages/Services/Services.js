@@ -1,22 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import ServiceCard from './ServiceCard';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import useTitle from '../../hooks/useTitle';
 
 const Services = () => {
 
     useTitle("services");
-    const [services, setServices] = useState([]);
+    const data = useLoaderData();
+    const [services, setServices] = useState(data);
+    
 
-    useEffect(() => {
-        fetch('services.json')
-            .then(res => res.json())
-            .then(data => {
-
-                return setServices(data);
-
-            })
-    }, [])
     return (
         <div className='my-10'>
             <section className="">
