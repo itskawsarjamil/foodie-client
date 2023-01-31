@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { authContext } from '../../context/AuthContext/AuthProvider';
 
-const ReviewForm = ({ service, setReviews }) => {
+const ReviewForm = ({ service, setReviews, setCount }) => {
     const { user } = useContext(authContext);
 
     const [rating, setRating] = useState(0);
@@ -36,6 +36,7 @@ const ReviewForm = ({ service, setReviews }) => {
             .then((response) => response.json())
             .then((data) => {
                 // console.log('Success:', data);
+                setCount((curr) => curr + 1);
                 setReviews((curr) => [...curr, data]);
             })
             .catch((error) => {

@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ServiceCard from './ServiceCard';
-import { Link, useLoaderData } from 'react-router-dom';
+import {  useLoaderData } from 'react-router-dom';
 import useTitle from '../../hooks/useTitle';
 
 const Services = () => {
 
     useTitle("services");
-    const data = useLoaderData();
-    const [services, setServices] = useState(data);
+    const services = useLoaderData();
+    // const [services, setServices] = useState(data);
     
 
     return (
@@ -16,7 +16,7 @@ const Services = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto  p-12 items-center justify-center">
 
                     {
-                        services.map(service => <ServiceCard key={service.service_id} service={service}></ServiceCard>)
+                        services.map((service,idx) => <ServiceCard key={idx} service={service}></ServiceCard>)
                     }
 
                 </div>

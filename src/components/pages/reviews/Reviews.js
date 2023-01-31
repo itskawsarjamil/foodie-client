@@ -6,7 +6,7 @@ const Reviews = ({ reviews, count }) => {
     return (
         <div className=''>
             {
-                reviews.length ?
+                count ?
                     <>
                         <p className='text-3xl font-bold mt-5'>Total Review: <span className='text-yellow-700'>{count}</span></p>
                         <div>

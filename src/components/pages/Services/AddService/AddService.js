@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import useTitle from '../../../hooks/useTitle';
 
+
 const AddService = () => {
     useTitle("Add Service");
 
     const [serviceData, setServiceData] = useState({
-        servicename: '',
+        title: '',
         photourl: '',
         price: '',
         description: '',
@@ -14,7 +15,7 @@ const AddService = () => {
     const [ingredientData, setIngredientData] = useState([]);
 
     const handleIngredient = (e) => {
-        console.log(e.target.name, e.target.value);
+        // console.log(e.target.name, e.target.value);
         setIngredientData((curr) => {
             return [...curr, e.target.value];
         });
@@ -31,8 +32,20 @@ const AddService = () => {
         e.preventDefault();
 
         serviceData.ingredient = [...ingredientData];
+        console.log(serviceData);
+        fetch("http://localhost:5000/addservice", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(serviceData)
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(e => console.log(e))
 
         e.target.reset();
+        alert("service add successfull");
     }
     return (
         <section className="p-6 bg-gray-800 text-gray-50">
@@ -44,8 +57,8 @@ const AddService = () => {
                     </div>
                     <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                         <div className="col-span-full sm:col-span-3">
-                            <label htmlFor="servicename" className="text-sm">Service Name</label>
-                            <input name='servicename' onChange={handleInput} required id="servicename" type="text" placeholder="Service Name" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 border-gray-700 text-gray-900" />
+                            <label htmlFor="title" className="text-sm">Service Name</label>
+                            <input name='title' onChange={handleInput} required id="title" type="text" placeholder="Service Name" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 border-gray-700 text-gray-900" />
                         </div>
                         <div className="col-span-full sm:col-span-3">
                             <label htmlFor="photourl" className="text-sm">Photo URL</label>
