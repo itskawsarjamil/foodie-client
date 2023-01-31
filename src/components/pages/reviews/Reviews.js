@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
+
 import Review from './Review';
 
-const Reviews = ({ reviews }) => {
+const Reviews = ({ reviews, count }) => {
 
     return (
         <div className=''>
             {
                 reviews.length ?
                     <>
-                        <p className='text-3xl font-bold mt-5'>Total Review: <span className='text-yellow-700'>{reviews.length}</span></p>
+                        <p className='text-3xl font-bold mt-5'>Total Review: <span className='text-yellow-700'>{count}</span></p>
                         <div>
                             {
                                 reviews.map((review, idx) => <Review key={idx} review={review}></Review>)
