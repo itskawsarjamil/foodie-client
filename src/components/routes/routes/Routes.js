@@ -12,7 +12,7 @@ import ServiceDetails from "../../pages/Services/ServiceDetails/ServiceDetails";
 import Profile from "../../pages/Profile/Profile";
 import DashboardLayout from "../../layout/Dashboard/DashboardLayout";
 import Orders from "../../pages/Orders/Orders";
-import Reviews from "../../pages/reviews/Reviews";
+import MyReviews from "../../pages/reviews/Myreviews/MyReviews";
 import PrivateRoute from "../privateRoute/PrivateRoute";
 
 
@@ -79,8 +79,9 @@ export const routes = createBrowserRouter([
                 element: <Orders></Orders>,
             },
             {
-                path: '/dashboard/reviews',
-                element: <Reviews></Reviews>,
+                path: '/dashboard/myreviews',
+                element: <MyReviews></MyReviews>,
+                
             },
         ]
     }
