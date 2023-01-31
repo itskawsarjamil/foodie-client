@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom';
 import Signuptoggle from './Signuptoggle';
 import Signintoggle from './Signintoggle';
 import { toggleContext } from '../../../App';
+import useTitle from '../../hooks/useTitle';
 
 const Signup = () => {
-    const { toggle,setToggle } = useContext(toggleContext);
+    useTitle("Signup");
+    const { toggle, setToggle } = useContext(toggleContext);
     // const [toggle, setToggle] = useState(true);
+    
 
     const handleToggle = (x) => {
         // console.log(x);

@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 const Review = () => {
@@ -10,7 +11,12 @@ const Review = () => {
                     <div className="flex flex-col">
                         <h4 className="text-lg font-semibold text-center md:text-left">Leroy Jenkins</h4>
                         <p className="text-gray-400">Sed non nibh iaculis, posuere diam vitae, consectetur neque. Integer velit ligula, semper sed nisl in, cursus commodo elit. Pellentesque sit amet mi luctus ligula euismod lobortis ultricies et nibh.</p>
+                        <div className='flex justify-end gap-4 text-lg'>
+                            <button><FontAwesomeIcon icon="fa-solid fa-pen-to-square" /></button>
+                            <button><FontAwesomeIcon icon="fa-solid fa-trash" /></button>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>

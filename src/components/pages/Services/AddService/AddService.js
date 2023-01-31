@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import useTitle from '../../../hooks/useTitle';
 
 const AddService = () => {
+    useTitle("Add Service");
 
     const [serviceData, setServiceData] = useState({
         servicename: '',
@@ -27,9 +29,9 @@ const AddService = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         serviceData.ingredient = [...ingredientData];
-        
+
         e.target.reset();
     }
     return (
