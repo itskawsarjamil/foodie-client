@@ -66,7 +66,7 @@ const Signuptoggle = ({ handleToggle }) => {
                 const currentUser = {
                     email: user.email
                 }
-                fetch('https://foodie-server-ten.vercel.app/jwt', {
+                fetch('https://foodie-server-itskawsarjamil.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

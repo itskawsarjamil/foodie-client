@@ -28,7 +28,7 @@ const ReviewForm = ({ service, setReviews, setCount }) => {
         // console.log(reviewData);
 
 
-        fetch("https://foodie-server-ten.vercel.app/addreview", {
+        fetch("https://foodie-server-itskawsarjamil.vercel.app/addreview", {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',

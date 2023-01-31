@@ -35,7 +35,7 @@ const AddService = () => {
 
         serviceData.ingredient = [...ingredientData];
         console.log(serviceData);
-        fetch("https://foodie-server-ten.vercel.app/addservice", {
+        fetch("https://foodie-server-itskawsarjamil.vercel.app/addservice", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',

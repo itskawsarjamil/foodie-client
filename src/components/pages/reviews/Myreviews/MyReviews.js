@@ -18,7 +18,7 @@ const MyReviews = () => {
     const [count, setCount] = useState(0);
     const [page, setPage] = useState(0);
     useEffect(() => {
-        fetch(`https://foodie-server-ten.vercel.app/myreviews?page=${page}&email=${user.email}`, {
+        fetch(`https://foodie-server-itskawsarjamil.vercel.app/myreviews?page=${page}&email=${user.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('json-token')}}`,
             }
@@ -52,7 +52,7 @@ const MyReviews = () => {
         }
     }
     const handleDelete = (id) => {
-        fetch(`https://foodie-server-ten.vercel.app/myreviews/${id}`, {
+        fetch(`https://foodie-server-itskawsarjamil.vercel.app/myreviews/${id}`, {
             method: "DELETE",
             headers: {
                 authorization: `Bearer ${localStorage.getItem("json-token")}`

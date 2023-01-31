@@ -14,7 +14,7 @@ const ModifyReview = ({ modifyReview, setIsChange }) => {
         reviewData.feedback = e.target.message.value;
         // console.log(reviewData);
 
-        fetch(`https://foodie-server-ten.vercel.app/modifyreview?id=${reviewData._id}`, {
+        fetch(`https://foodie-server-itskawsarjamil.vercel.app/modifyreview?id=${reviewData._id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

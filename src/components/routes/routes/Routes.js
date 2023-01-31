@@ -33,12 +33,12 @@ export const routes = createBrowserRouter([
             {
                 path: '/services',
                 element: <Services></Services>,
-                loader: () => fetch("https://foodie-server-ten.vercel.app/services"),
+                loader: () => fetch("https://foodie-server-itskawsarjamil.vercel.app/services"),
             },
             {
                 path: '/services/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({ params }) => fetch(`https://foodie-server-ten.vercel.app/services/${params.id}`),
+                loader: ({ params }) => fetch(`https://foodie-server-itskawsarjamil.vercel.app/services/${params.id}`),
             },
             {
                 path: '/about',

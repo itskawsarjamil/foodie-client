@@ -16,7 +16,7 @@ const ServiceDetails = () => {
     const [count, setCount] = useState(0);
     const [page, setPage] = useState(0);
     useEffect(() => {
-        fetch(`https://foodie-server-ten.vercel.app/reviews/${_id}?page=${page}`)
+        fetch(`https://foodie-server-itskawsarjamil.vercel.app/reviews/${_id}?page=${page}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
