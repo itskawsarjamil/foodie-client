@@ -39,6 +39,7 @@ const AuthProvider = ({ children }) => {
 
     const logout = () => {
         // setLoading(true);
+        localStorage.removeItem('json-token');
         return signOut(auth);
     }
 
@@ -58,7 +59,8 @@ const AuthProvider = ({ children }) => {
         modifyPassword,
         googleSignin,
         logout,
-        loading
+        loading,
+        setLoading
     };
     return (
         <authContext.Provider value={authValue}>

@@ -1,11 +1,11 @@
 import React, { useContext, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { authContext } from '../../context/AuthContext/AuthProvider';
 import { toggleContext } from '../../../App';
 
 const Signuptoggle = ({ handleToggle }) => {
     const { signup, modifyInfo } = useContext(authContext);
-    const { locationState, setLocationState } = useContext(toggleContext);
+    const { locationState } = useContext(toggleContext);
     const [state, setState] = useState(true);
     const navigate = useNavigate();
     // const location = useLocation();

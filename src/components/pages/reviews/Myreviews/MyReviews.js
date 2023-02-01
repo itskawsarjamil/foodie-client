@@ -20,7 +20,8 @@ const MyReviews = () => {
     useEffect(() => {
         fetch(`https://foodie-server-itskawsarjamil.vercel.app/myreviews?page=${page}&email=${user.email}`, {
             headers: {
-                authorization: `Bearer ${localStorage.getItem('json-token')}}`,
+                'Content-Type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('json-token')}`,
             }
         })
             .then(res => {
@@ -30,8 +31,10 @@ const MyReviews = () => {
                 return res.json();
             })
 
+
             .then(data => {
                 // console.log(data);
+                
                 setCount(data.count);
                 setReviews(data.result);
             })

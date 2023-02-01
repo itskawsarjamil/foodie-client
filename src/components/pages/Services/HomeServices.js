@@ -7,13 +7,9 @@ const HomeServices = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('https://foodie-server-itskawsarjamil.vercel.app/services')
+        fetch('https://foodie-server-itskawsarjamil.vercel.app/services?count=3')
             .then(res => res.json())
-            .then(data => {
-
-                return setServices(data.slice(0, 3));
-
-            })
+            .then(data => setServices(data))
     }, [])
     return (
         <div className='my-10'>

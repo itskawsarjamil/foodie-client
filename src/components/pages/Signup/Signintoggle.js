@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { authContext } from '../../context/AuthContext/AuthProvider';
 import { toggleContext } from '../../../App';
 
 
 const Signintoggle = ({ handleToggle }) => {
     const navigate = useNavigate();
-    const { locationState, setLocationState } = useContext(toggleContext);
+    const { locationState } = useContext(toggleContext);
     // const location = useLocation();
     // let from = location.state?.from?.pathname || "/";
     const { signin, modifyPassword, googleSignin } = useContext(authContext);

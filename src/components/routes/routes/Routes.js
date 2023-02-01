@@ -80,7 +80,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/dashboard/myreviews',
-                element: <MyReviews></MyReviews>,
+                element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>,
 
             },
 
