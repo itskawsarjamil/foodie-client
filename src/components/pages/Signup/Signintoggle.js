@@ -79,7 +79,7 @@ const Signintoggle = ({ handleToggle }) => {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data)
+                        // console.log(data)
                         localStorage.setItem('json-token', data.token);
                     })
                 navigate(locationState, { replace: true });
