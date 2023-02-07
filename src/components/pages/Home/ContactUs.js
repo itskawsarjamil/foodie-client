@@ -34,7 +34,7 @@ const ContactUs = () => {
                                 </svg>
                             </a>
                         </div>
-                        <div className="w-full max-w-xl xl:px-8 xl:w-5/12">
+                        <div className="w-full max-w-xl xl:px-8 xl:w-5/12 text-black">
                             <div className="bg-white rounded shadow-2xl p-7 sm:p-10">
                                 <h3 className="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">
                                     Contact Us
@@ -75,7 +75,7 @@ const ContactUs = () => {
                                     </div>
                                     <div className="mt-1">
                                         <p className="text-lg font-semibold mb-1">Feedback</p>
-                                        <textarea style={{ resize: "none" }} className="border-2 pt-2 px-5" placeholder="write your thought" name="textarea" id="" cols="35" rows="1" >
+                                        <textarea  className="border-2 py-2 px-5 mr-4 md:mr-0 bg-white" placeholder="write your thought" name="textarea" id="" cols="35" rows="1" >
 
                                         </textarea>
                                     </div>

@@ -13,7 +13,7 @@ function App() {
     setLocationState
   }
   return (
-    <div className="App">
+    <div className="App bg-white">
       <toggleContext.Provider value={toggleValue}>
         <RouterProvider router={routes}></RouterProvider>
       </toggleContext.Provider>
